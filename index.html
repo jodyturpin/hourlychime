@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourly Chime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+   
+   
+</head>
+<body>
+
+
+    <section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card">
+                  <br>
+                    <header class="card-image">
+                        <figure class="image is-2by1">
+                            <img src="clock.png" alt="clock">
+                        </figure>
+                        <br>
+  
+
+                        <button class="button" onclick="playSound()">Test Sound</button>
+                        <script>
+                        let playSound = () => new Audio("magic-mallet.mp3").play();
+                        </script>
+
+                        
+                        <div id="clock" class="container">  
+                          <script> 
+                            //Clock 
+                            const clock = () => {
+                            const date = new Date();
+                            let hrs = date.getHours();
+                            let mins = date.getMinutes();
+                            let secs = date.getSeconds();
+                            let period = "AM";
+                            if (hrs == 0) {
+                              hrs = 12;
+                            } else if (hrs >= 12) {
+                              hrs = hrs - 12;
+                              period = "PM";
+                            }
+                            hrs = hrs < 10 ? "0" + hrs : hrs;
+                            mins = mins < 10 ? "0" + mins : mins;
+                            secs = secs < 10 ? "0" + secs : secs;
+                                                
+                            let time = `${hrs}:${mins}:${secs}:${period}`;
+                            document.getElementById("clock").innerText = time;
+                            setTimeout(clock, 1000);
+                            };
+                            
+                          
+
+                            clock();
+                            </script>
+                          </div>
+
+                          <div id="chime">
+                          <script>
+                          var getSecond = window.setInterval(function getSecs(){
+                                const seconds = new Date().getSeconds();
+                                const minutes = new Date().getMinutes(); 
+                                console.log(seconds);
+                                if (minutes == 00 && seconds == 00){
+                                    playSound();
+                                }
+                              }, 1000);
+               
+                          </script>
+                        </div>
+                      
+        </div>
+    </div>
+    </section>
+
+</body>
+</html>

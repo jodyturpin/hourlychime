@@ -1,0 +1,21 @@
+#clock {
+    color: rgb(49, 113, 116);
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px rgb(214, 214, 214);
+}
+
+.container {
+    text-align: center;
+    align-content: center;
+}
+
+body {
+    background-color: rgb(226, 234, 231);
+}
+
+.button{
+    background-color: rgb(75, 136, 139);
+    color: white;
+}
