@@ -8,8 +8,13 @@
     <title>Hourly Chime</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="app.css">
-   
-   
+    <script src="./HackTimer.min.js"></script>
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    </script>
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
@@ -68,12 +73,12 @@
                           var getSecond = window.setInterval(function getSecs(){
                                 const seconds = new Date().getSeconds();
                                 const minutes = new Date().getMinutes(); 
-                                console.log(seconds);
+                                console.log(minutes);
                                 if (minutes == 00 && seconds == 00){
                                     playSound();
                                 }
                               }, 1000);
-               
+                            console.log(getSecond);
                           </script>
                         </div>
                       
