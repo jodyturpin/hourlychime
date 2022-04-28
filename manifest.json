@@ -2,7 +2,7 @@
   "theme_color": "#AAAAAA",
   "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "/",
+  "scope": "https://jodyturpin.github.io/hourlychime/",
   "start_url": "https://jodyturpin.github.io/hourlychime/",
   "name": "Hourly Chime",
   "short_name": "Chime",
