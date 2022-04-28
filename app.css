@@ -11,7 +11,7 @@
     align-content: center;
 }
 
-body {
+body, html {
     background-color: rgb(226, 234, 231);
 }
 
