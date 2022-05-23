@@ -1,14 +1,16 @@
 #clock {
     color: rgb(49, 113, 116);
-    font-size: 80px;
+    font-size: 78px;
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px rgb(214, 214, 214);
+    margin: 1px;
 }
 
 .container {
     text-align: center;
     align-content: center;
+
 }
 
 body, html {
