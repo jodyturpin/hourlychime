@@ -31,7 +31,7 @@
                         </figure>
                         <br>
   
-                        <button class="button">Mute</button>  
+                        <button class="button" id="mute" onclick="">Mute</button>  
                         <button class="button" onclick="playSound()">Test Sound</button>
                         <script>
                         let playSound = () => new Audio("magic-mallet.mp3").play();
@@ -82,6 +82,12 @@
                           </script>
                         </div>
                       
+                        <div>
+                          <script>
+                          document.getElementById("halt").addEventListener("click", haltFunction);
+                          </script>    
+                        </div>
+
         </div>
     </div>
     </section>
