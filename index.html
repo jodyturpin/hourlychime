@@ -86,6 +86,9 @@
                         <div>
                           <script>
                           document.getElementById("halt").addEventListener("click", haltFunction);
+                          function haltFunction() {
+                          clearInterval(timeValue);
+                          }
                           </script>    
                         </div>
 
