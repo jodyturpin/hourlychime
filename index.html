@@ -34,6 +34,7 @@
   
                         <button class="button" id="mute" onclick="">Mute (not working)</button>  
                         <button class="button" onclick="playSound()">Test Sound</button>
+                        <button class="button: onclick="myFunction()">Toggle Dark Mode</button>
                         <script>
                         let playSound = () => new Audio("magic-mallet.mp3").play();
                         </script>
@@ -90,6 +91,15 @@
                           clearInterval(timeValue);
                           }
                           </script>    
+                        </div>
+
+                        <div>
+                          <script>
+                            function myFunction() {
+                               var element = document.body;
+                               element.classList.toggle("dark-mode");
+                            }
+                            </script>
                         </div>
 
         </div>
