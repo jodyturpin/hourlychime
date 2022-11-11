@@ -30,20 +30,23 @@
                         <figure class="image is-2by1">
                             <img src="clock.png" alt="clock">
                         </figure>
+                        
+                        <!-- Buttons -->
                         <br>
                         <button class="button" onclick="playSound()">Test Sound</button>
                         <br>
                         <br>
                         <button class="button" id="mute" onclick="">Mute (not working)</button>
                         <button class="button" onclick="myFunction()">Toggle Dark Mode</button>
+                        
+                        <!-- Audio -->
                         <script>
                         let playSound = () => new Audio("magic-mallet.mp3").play();
                         </script>
 
-                        
+                        <!-- Clock  -->
                         <div id="clock" class="container is-size-1-touch">  
-                          <script> 
-                            //Clock 
+                          <script>                            
                             const clock = () => {
                             const date = new Date();
                             let hrs = date.getHours();
@@ -71,6 +74,7 @@
                             </script>
                           </div>
 
+                          <!-- Chime Audio -->
                           <div id="chime">
                           <script>
                           var getSecond = window.setInterval(function getSecs(){
@@ -94,12 +98,12 @@
                           </script>    
                         </div>
 
+                        <!-- Dark Mode -->
                         <div>
                           <script>
                             function myFunction() {
                                var element = document.body;
                                element.classList.toggle("dark-mode");
-                               element.classList.toggle();
                             }
                             </script>
                         </div>

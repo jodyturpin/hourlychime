@@ -1,14 +1,13 @@
-
-.dark-mode {
-    background-color: rgb(49, 49, 49);
+body {
+    background-color: rgb(116, 149, 137);
 }
 
 #clock {
-    color: rgb(116, 167, 155);
+    color: rgb(82, 151, 135);
     font-size: 78px;
     font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px rgb(214, 214, 214);
+    text-shadow: 2px 2px rgb(204, 204, 204);
     margin: 1px;
 }
 
@@ -18,12 +17,32 @@
 
 }
 
-body, html {
-    background-color: rgb(226, 234, 231);
-}
-
-
 .button{
     background-color: rgb(75, 136, 139);
     color: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: rgb(8, 28, 26); 
+    color: black;
+}
+
+.dark-mode #clock {
+    color: rgb(99, 141, 135);;
+    background-color: rgb(12, 45, 41);
+    text-shadow: 2px 2px rgb(41, 37, 37); 
+    margin: 0px;
+}
+
+.dark-mode .card {
+    background-color: rgb(12, 45, 41);
+
+}
+
+.dark-mode .button {
+    background-color: rgb(46, 86, 76);
+    color: rgb(21, 34, 44);
+    border-color: rgb(21, 34, 31);
+    border-width: 1px;
 }
