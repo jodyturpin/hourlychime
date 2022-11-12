@@ -28,7 +28,7 @@
                   <br>
                     <header class="card-image">
                         <figure class="image is-2by1">
-                            <img src="clock.png" alt="clock">
+                            <img id="myImage" src="clock.png" alt="clock">
                         </figure>
                         
                         <!-- Buttons -->
@@ -104,7 +104,17 @@
                             function myFunction() {
                                var element = document.body;
                                element.classList.toggle("dark-mode");
-                            }
+                               var image = document.getElementById('myImage');
+                                  if (image.src.match("clock.png")) {
+                                    image.src = "darkmodeclock.png";
+                                  } else {
+                                    image.src = "clock.png";
+                                  }
+
+                               }
+
+
+
                             </script>
                         </div>
 
