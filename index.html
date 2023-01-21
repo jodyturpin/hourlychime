@@ -18,8 +18,6 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-
-
     <section class="section">
     <div class="container">
         <div class="columns">
@@ -80,12 +78,12 @@
                           var getSecond = window.setInterval(function getSecs(){
                                 const seconds = new Date().getSeconds();
                                 const minutes = new Date().getMinutes(); 
-                                console.log(minutes);
+                                // console.log(minutes);
                                 if (minutes == 00 && seconds == 00){
                                     playSound();
                                 }
                               }, 1000);
-                            console.log(getSecond);
+                            // console.log(getSecond);
                           </script>
                         </div>
                       
@@ -104,15 +102,33 @@
                             function myFunction() {
                                var element = document.body;
                                element.classList.toggle("dark-mode");
-                               var image = document.getElementById('myImage');
-                                  if (image.src.match("clock.png")) {
-                                    image.src = "darkmodeclock.png";
-                                  } else {
-                                    image.src = "clock.png";
+                               ///Toggle an image? 
+                              //  var image = document.getElementById('myImage');
+                              //     if (image.src.match("clock.png")) {
+                              //       image.src = "darkmodeclock.png";
+                              //       console.log(image);
+                              //     } else {
+                              //      image.src = "clock.png";
+                              //      console.log("Boom schkalaka");
+                              //     }
+                              var image = document.getElementById('myImage');
+                                if (image.src.match('darkmodeclock.png')){
+                                  image.src = 'clock.png';
                                   }
-
+                                  else {
+                                    image.src = 'darkmodeclock.png';
+                                  }
                                }
-
+                              
+                              // function changeImage() {
+                              //   var image = document.getElementById('myImage');
+                              //   if (image.src.match('darkmodeclock.png')){
+                              //     image.src = 'clock.png';
+                              //     }
+                              //     else {
+                              //       image.src = 'darkmodeclock.png';
+                              //     }
+                              
 
 
                             </script>
@@ -120,6 +136,7 @@
 
         </div>
     </div>
+        </div>
     </section>
 
 </body>
