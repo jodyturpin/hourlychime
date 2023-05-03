@@ -20,6 +20,7 @@ body {
 .button{
     background-color: rgb(75, 136, 139);
     color: white;
+    margin: 5px;
 }
 
 /* Dark Mode */

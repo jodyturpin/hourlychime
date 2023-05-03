@@ -17,7 +17,7 @@
     </script>
     <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body onload="getCheckboxValue()">
     <section class="section">
     <div class="container">
         <div class="columns">
@@ -31,10 +31,11 @@
                         
                         <!-- Buttons -->
                         <br>
+                        <input type="checkbox" id="mute" onclick="getCheckboxValue()">Mute</button> 
+                        <br>
+                        <br>
                         <button class="button" onclick="playSound()">Test Sound</button>
                         <br>
-                        <br>
-                        <button class="button" id="mute" onclick="muteFunction()">Mute (not working)</button>
                         <button class="button" onclick="myFunction()">Toggle Dark Mode</button>
                         
                         <!-- Audio -->
@@ -71,31 +72,43 @@
                             clock();
                             </script>
                           </div>
-
+  
                           <!-- Chime Audio -->
                           <div id="chime">
                           <script>
-                          var getSecond = window.setInterval(function getSecs(){
+
+                            var test = "Yes";
+                            function testFunction() {
+                              let test = "No";
+                              console.log(test);
+                            };
+
+
+                        function getCheckboxValue() {
+                          input = document.getElementById("mute");
+                          if (input.checked == true) {
+                              checked = true; 
+                              (console.log(checked));
+                          }
+                            else {
+                              checked = false;
+                              (console.log(checked));
+                          }
+                          };
+  
+                          
+                          var getSecond = window.setInterval(function getSecs() {
                                 const seconds = new Date().getSeconds();
-                                const minutes = new Date().getMinutes(); 
-                                // console.log(minutes);
-                                if (minutes == 00 && seconds == 00){
+                                const minutes = new Date().getMinutes();
+                                if (minutes == 00 && seconds == 00 && checked == false){
                                     playSound();
+                                    console.log(checked);
                                 }
                               }, 1000);
-                            // console.log(getSecond);
                           </script>
                           </div>
 
-                          <!-- <div>
-                            <script>
-                            function muteFunction() {
-                              
-                            }
-                            </script>
-                          </div> -->
-                      
-                       
+
                         <!-- Dark Mode -->
                         <div>
                           <script>
